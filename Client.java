@@ -1,4 +1,4 @@
-
+import java.util.List;
 
 abstract class Person {
 
@@ -105,6 +105,16 @@ class Meeting{
     public void Meeting_Cost(){
         double Meetingcost = psychologist.getCost() - client.getDiscount(); 
         System.out.println("Meeting cost: " Meetingcost);
+    }
+    public static void main(String[] args){
+        List<Meeting> meetings = new ArrayList<>();
+        Client ivan = new Client("Ivan");
+        Client dima = new Client("Dima", 100);
+        Psychologist polina = new Psychologist("polina", 2000);
+        Zoom meet1 = new Zoom("Zoom/U1vqQ","18:00");
+        Zoom meet2 = new Zoom("Zoom/U1vqQ","19:00");
+        Meeting meeting1 = new Meeting(dima,polina,meet1);
+        meetings.add(meeting1);
     }
 }
 
