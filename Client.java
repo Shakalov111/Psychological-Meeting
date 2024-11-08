@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 abstract class Person {
@@ -31,8 +32,9 @@ public class Client extends Person {
 
     private double discount;
 
-    public Client(){
+    public Client(String name){
         super();
+        this.setName(name);
         this.discount = 0.0;  
     }
     public Client(String name, double discount){
@@ -41,6 +43,11 @@ public class Client extends Person {
     }
     public double getDiscount() {
         return discount;
+    }
+    @Override
+    public void displayInfo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'displayInfo'");
     }
   
 }
@@ -99,12 +106,12 @@ class Meeting{
         this.zoom = zoom;
     }
     public void doMeet(){
-        System.out.println("Client " ,client.getName(), " They are holding a meeting with ",psychologist.getName()," via the link:" zoom.getURL() ); 
+        System.out.println("Client " + client.getName() + " They are holding a meeting with " + psychologist.getName() + " via the link:" + zoom.getURL() ); 
     }
 
     public void Meeting_Cost(){
         double Meetingcost = psychologist.getCost() - client.getDiscount(); 
-        System.out.println("Meeting cost: " Meetingcost);
+        System.out.println("Meeting cost: " + Meetingcost);
     }
     public static void main(String[] args){
         List<Meeting> meetings = new ArrayList<>();
@@ -115,6 +122,11 @@ class Meeting{
         Zoom meet2 = new Zoom("Zoom/U1vqQ","19:00");
         Meeting meeting1 = new Meeting(dima,polina,meet1);
         meetings.add(meeting1);
+        Meeting meeting2 = new Meeting(ivan,polina,meet2);
+        meetings.add(meeting2);
+        for(Meeting meeting: meetings){
+            meeting.doMeet();
+        }
     }
 }
 
