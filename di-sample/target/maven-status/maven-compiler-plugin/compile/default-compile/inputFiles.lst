@@ -2,4 +2,5 @@
 /workspaces/Psychological-Meeting/di-sample/src/main/java/com/di/Meeting.java
 /workspaces/Psychological-Meeting/di-sample/src/main/java/com/di/Person.java
 /workspaces/Psychological-Meeting/di-sample/src/main/java/com/di/Psychologist.java
+/workspaces/Psychological-Meeting/di-sample/src/main/java/com/di/PsychologistModule.java
 /workspaces/Psychological-Meeting/di-sample/src/main/java/com/di/Zoom.java
