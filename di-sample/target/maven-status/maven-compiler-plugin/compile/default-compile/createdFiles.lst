@@ -1,6 +1,8 @@
 com/di/Zoom.class
 com/di/PsychologistModule.class
 com/di/Psychologist.class
+com/di/Paycheck.class
+com/di/Meeting.class
+com/di/PaymentService.class
 com/di/Person.class
 com/di/Client.class
-com/di/Meeting.class

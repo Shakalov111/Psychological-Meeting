@@ -7,6 +7,7 @@ import com.google.inject.name.Named;
 class Psychologist extends Person {
 
     private double cost;
+    private PaymentService paymentService;
 
     // public Psychologist(){
     //     super();
@@ -28,6 +29,11 @@ class Psychologist extends Person {
     public void setCost(@Named("Cost") Double cost ) {
         this.cost = cost;
      }
+
+    @Inject
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
  
 
     public double getCost() {
@@ -40,5 +46,9 @@ class Psychologist extends Person {
         System.out.println("Cosy: "+ this.getCost());
         
     }
+    void pay(Paycheck paycheck){
+        paymentService.savePaycheck(paycheck);
+    }
+    
   
 }
