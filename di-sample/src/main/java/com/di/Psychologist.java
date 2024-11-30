@@ -8,26 +8,26 @@ class Psychologist extends Person {
 
     private double cost;
 
-    // public Psychologist(){
-    //     super();
-    //     this.cost = 200.0;  
-    // }
-    // @Inject
-    // public Psychologist(@Named("Name") String name, 
-    //                     @Named("Cost") double cost){
-    //     super(name);
-    //     this.cost = cost;
-    // }
-
+    public Psychologist(){
+        super();
+        this.cost = 200.0;  
+    }
     @Inject
-    public void setName(@Named("Name") String name) {
-       super.setName(name); 
+    public Psychologist(@Named("Name") String name, 
+                        @Named("Cost") double cost){
+        super(name);
+        this.cost = cost;
     }
 
-    @Inject
-    public void setCost(@Named("Cost") Double cost ) {
-        this.cost = cost;
-     }
+    // @Inject
+    // public void setName(@Named("Name") String name) {
+    //    super.setName(name); 
+    // }
+
+    // @Inject
+    // public void setCost(@Named("Cost") Double cost ) {
+    //     this.cost = cost;
+    //  }
  
 
     public double getCost() {
